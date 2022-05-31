@@ -12,7 +12,6 @@ const sponsors = {
     eu: ['SRL', 'PLO', 'J&K'],
     rus: ['RusAuto', 'SBO'],
     calcCash: function (own = 0) {
-        //console.log(this);
         return sponsors.cash.reduce((acc, current) => {
             return acc + current;
         }, own);    

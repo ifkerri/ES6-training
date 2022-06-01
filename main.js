@@ -1,4 +1,6 @@
 
+'use strict'
+
 const employers = ['Alex', '', 'ludmila', 'Viktor', '', 'oleg', 'iNna', 'Ivan', 'Alex', 'Olga', ' Ann'];
 
 const employersNames = employers.filter(item => {
@@ -7,15 +9,11 @@ const employersNames = employers.filter(item => {
     return item.toLowerCase().trim();
 });
 
-const sponsors = {
+let sponsors = {
     cash: [40000, 5000, 30400, 12000],
     eu: ['SRL', 'PLO', 'J&K'],
     rus: ['RusAuto', 'SBO'],
-    calcCash: function (own = 0) {
-        return sponsors.cash.reduce((acc, current) => {
-            return acc + current;
-        }, own);    
-    }
+    calcCash: (own = 0) => sponsors.cash.reduce((acc, current) => acc + current, own)
 };
 
 const {cash, eu, eu: [hugeRisk], rus, calcCash} = sponsors;
